@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Undangan Pernikahan</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Poppins:wght@300;400&display=swap');
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: url('/mnt/data/A_beautiful,_soft-focus_wedding_background_featuri.png') no-repeat center center fixed;
+            background-size: cover;
+            color: #333;
+            padding: 0;
+            margin: 0;
+        }
+
+        .overlay {
+            background-color: rgba(255, 255, 255, 0.8);
+            min-height: 100vh;
+            padding: 50px 0;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 50px auto;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 15px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+            position: relative;
+            overflow: hidden;
+        }
+
+        h1, h2 {
+            font-family: 'Playfair Display', serif;
+            text-align: center;
+            color: #b35f7a;
+        }
+
+        p {
+            text-align: center;
+            font-size: 1.1em;
+            line-height: 1.6;
+            margin: 10px 0;
+        }
+
+        .date {
+            font-weight: bold;
+            color: #d46a6a;
+            font-size: 1.2em;
+        }
+
+        .divider {
+            width: 60%;
+            height: 3px;
+            background-color: #e5e5e5;
+            margin: 20px auto;
+        }
+
+        .footer {
+            text-align: center;
+            margin-top: 30px;
+            font-size: 0.9em;
+            color: #999;
+        }
+
+        .btn-info {
+            display: block;
+            width: 200px;
+            margin: 20px auto;
+            padding: 10px;
+            text-align: center;
+            background-color: #b35f7a;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 1em;
+        }
+
+        .info-details {
+            display: none;
+            margin-top: 20px;
+            text-align: center;
+            font-size: 1em;
+            color: #555;
+        }
+
+        .decorative-border {
+            position: absolute;
+            top: -50px;
+            left: -50px;
+            width: 200px;
+            height: 200px;
+            background-color: #f9d5e5;
+            border-radius: 50%;
+            z-index: -1;
+            animation: scaleUp 6s infinite ease-in-out;
+        }
+
+        .decorative-border2 {
+            position: absolute;
+            bottom: -80px;
+            right: -80px;
+            width: 250px;
+            height: 250px;
+            background-color: #f9d5e5;
+            border-radius: 50%;
+            z-index: -1;
+            animation: scaleUp 5s infinite ease-in-out alternate;
+        }
+
+        @keyframes scaleUp {
+            0% {
+                transform: scale(0.9);
+            }
+            50% {
+                transform: scale(1.05);
+            }
+            100% {
+                transform: scale(0.9);
+            }
+        }
+    </style>
+    <script>
+        function toggleInfo() {
+            var infoDetails = document.getElementById("info-details");
+            if (infoDetails.style.display === "none" || infoDetails.style.display === "") {
+                infoDetails.style.display = "block";
+            } else {
+                infoDetails.style.display = "none";
+            }
+        }
+    </script>
+</head>
+<body>
+    <div class="overlay">
+        <div class="container">
+            <div class="decorative-border"></div>
+            <div class="decorative-border2"></div>
+            
+            <h1>Undangan Pernikahan</h1>
+            <p>Dengan memohon rahmat dan ridho Allah SWT, kami bermaksud menyelenggarakan acara pernikahan putra dan putri kami:</p>
+            
+            <h2>Ahmad Riyadi & Fitri Lestari</h2>
+            
+            <div class="divider"></div>
+            
+            <p>Kami akan sangat bahagia jika Bapak/Ibu/Saudara/i dapat hadir untuk memberikan doa restu pada acara yang Insya Allah akan dilaksanakan pada:</p>
+            
+            <p class="date">Sabtu, 12 Oktober 2024</p>
+            <p>di Gedung Serba Guna<br>Jl. Cinta Kasih No.123, Jakarta</p>
+            
+            <div class="divider"></div>
+            
+            <p>Merupakan suatu kehormatan dan kebahagiaan bagi kami, apabila Bapak/Ibu/Saudara/i berkenan hadir untuk memberikan doa restu kepada kami. Atas kehadiran dan doa restunya, kami mengucapkan terima kasih.</p>
+            
+            <p>Wassalamu'alaikum Wr. Wb.</p>
+            
+            <button class="btn-info" onclick="toggleInfo()">Informasi Lainnya</button>
+            
+            <div id="info-details" class="info-details">
+                <p>Rangkaian acara pernikahan:</p>
+                <ul style="list-style-type:none; padding-left: 0;">
+                    <li>10:00 - 11:00 WIB: Akad Nikah</li>
+                    <li>11:00 - 12:00 WIB: Resepsi</li>
+                    <li>12:00 - 13:00 WIB: Makan Siang</li>
+                </ul>
+                <p>Dress code: Tradisional Batik atau Kebaya</p>
+            </div>
+            
+            <div class="footer">
+                <p>Ahmad & Fitri</p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
